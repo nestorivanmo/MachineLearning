@@ -78,4 +78,65 @@ Minimize $\Theta_0 , \Theta_1$
 
 $J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$
 
-​	
+---
+
+8/VIII/2019 
+
+**Cost function: intuition I**
+
+![Screen Shot 2019-08-08 at 15.15.27](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.15.27.png)
+
+![Screen Shot 2019-08-08 at 15.19.18](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.19.18.png)
+
+Our objective, with linear regression, is to find the optimal line that crosses the most points of our dataset (which is scattered through the XY plane) or the line that passes through the points with the less distance between the points and the line. This *line* is called *cost function*. 
+
+**Cost function: intuition II**
+
+![Screen Shot 2019-08-08 at 15.24.29](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.24.29.png)
+
+
+
+![Screen Shot 2019-08-08 at 15.27.13](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.27.13.png)
+
+We want an algorithm that automatically obtains a lower cost function based on finding some $\Theta_0 \Theta_1$ values that **MINIMIZE** our cost function. 
+
+---
+
+#### Grading Descent 
+
+Algorithm that can helps us find our minimized cost function
+
+![Screen Shot 2019-08-08 at 15.35.49](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.35.49.png)
+
+**Imagine** we are standing at the top of the hill and we want to come down as quick as possible. 
+
+![Screen Shot 2019-08-08 at 15.42.34](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.42.34.png)
+
+![Screen Shot 2019-08-08 at 15.45.02](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.45.02.png)
+
+$\alpha$ : learning rate. Aka, it controls how big or small the steps we take down. 
+
+$\frac{\partial}{\partial \Theta_0}J(\Theta_0,Theta_1)$: 
+
+![Screen Shot 2019-08-08 at 15.57.16](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.57.16.png)
+
+![Screen Shot 2019-08-08 at 15.59.38](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.59.38.png)
+
+As we approach the local minimun, gradient descent will automatically take smaller steps so there is no need to decrese $\alpha$ over time. 
+
+---
+
+#### Grading Descent for Linear Regression 
+
+![Screen Shot 2019-08-08 at 16.27.45](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 16.27.45.png)
+
+**Batch** grading descent: each step of gradient descent uses all the training sets. 
+
+
+
+
+
+
+
+
+
