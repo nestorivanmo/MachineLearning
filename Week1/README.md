@@ -31,15 +31,15 @@ A computer program is said to *learn* from experience E with respect to some tas
 
 1. **Regression problem**
 
-![Screen Shot 2019-08-06 at 15.45.56](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-06 at 15.45.56.png)
+![Screen Shot 2019-08-06 at 15.45.56](Screen Shot 2019-08-06 at 15.45.56.png)
 
 Rights answers were given to this algorithm. The task of the algorithm was just to produce more right answers. This is also called a **regression problem** where the algorithm should produce continious valued output (price). 
 
 2. **Classification problem**: discrete value output (0 or 1)
 
-   ![Screen Shot 2019-08-06 at 15.59.33](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-06 at 15.59.33.png)
+   ![Screen Shot 2019-08-06 at 15.59.33](Screen Shot 2019-08-06 at 15.59.33.png)
 
-![Screen Shot 2019-08-06 at 16.03.02](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-06 at 16.03.02.png) 
+![Screen Shot 2019-08-06 at 16.03.02](Screen Shot 2019-08-06 at 16.03.02.png) 
 
 We can work with an infinite long list of features. 
 
@@ -62,9 +62,9 @@ Data that has no labels. Given a dataset, can you find some structure? Unsupervi
 
 **Model representation**
 
-![Screen Shot 2019-08-06 at 16.46.13](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-06 at 16.46.13.png)
+![Screen Shot 2019-08-06 at 16.46.13](Screen Shot 2019-08-06 at 16.46.13.png)
 
-![Screen Shot 2019-08-06 at 16.48.27](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-06 at 16.48.27.png)
+![Screen Shot 2019-08-06 at 16.48.27](Screen Shot 2019-08-06 at 16.48.27.png)
 
 **Cost function**
 
@@ -74,7 +74,7 @@ $h=\Theta_1 + \Theta_2 x$
 
 Minimize $\Theta_0 , \Theta_1$
 
-![Screen Shot 2019-08-06 at 17.02.08](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-06 at 17.02.08.png)
+![Screen Shot 2019-08-06 at 17.02.08](Screen Shot 2019-08-06 at 17.02.08.png)
 
 $J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$
 
@@ -84,19 +84,19 @@ $J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat
 
 **Cost function: intuition I**
 
-![Screen Shot 2019-08-08 at 15.15.27](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.15.27.png)
+![Screen Shot 2019-08-08 at 15.15.27](Screen Shot 2019-08-08 at 15.15.27.png)
 
-![Screen Shot 2019-08-08 at 15.19.18](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.19.18.png)
+![Screen Shot 2019-08-08 at 15.19.18](Screen Shot 2019-08-08 at 15.19.18.png)
 
 Our objective, with linear regression, is to find the optimal line that crosses the most points of our dataset (which is scattered through the XY plane) or the line that passes through the points with the less distance between the points and the line. This *line* is called *cost function*. 
 
 **Cost function: intuition II**
 
-![Screen Shot 2019-08-08 at 15.24.29](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.24.29.png)
+![Screen Shot 2019-08-08 at 15.24.29](Screen Shot 2019-08-08 at 15.24.29.png)
 
 
 
-![Screen Shot 2019-08-08 at 15.27.13](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.27.13.png)
+![Screen Shot 2019-08-08 at 15.27.13](Screen Shot 2019-08-08 at 15.27.13.png)
 
 We want an algorithm that automatically obtains a lower cost function based on finding some $\Theta_0 \Theta_1$ values that **MINIMIZE** our cost function. 
 
@@ -106,21 +106,21 @@ We want an algorithm that automatically obtains a lower cost function based on f
 
 Algorithm that can helps us find our minimized cost function
 
-![Screen Shot 2019-08-08 at 15.35.49](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.35.49.png)
+![Screen Shot 2019-08-08 at 15.35.49](Screen Shot 2019-08-08 at 15.35.49.png)
 
 **Imagine** we are standing at the top of the hill and we want to come down as quick as possible. 
 
-![Screen Shot 2019-08-08 at 15.42.34](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.42.34.png)
+![Screen Shot 2019-08-08 at 15.42.34](Screen Shot 2019-08-08 at 15.42.34.png)
 
-![Screen Shot 2019-08-08 at 15.45.02](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.45.02.png)
+![Screen Shot 2019-08-08 at 15.45.02](Screen Shot 2019-08-08 at 15.45.02.png)
 
 $\alpha$ : learning rate. Aka, it controls how big or small the steps we take down. 
 
 $\frac{\partial}{\partial \Theta_0}J(\Theta_0,Theta_1)$: 
 
-![Screen Shot 2019-08-08 at 15.57.16](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.57.16.png)
+![Screen Shot 2019-08-08 at 15.57.16](Screen Shot 2019-08-08 at 15.57.16.png)
 
-![Screen Shot 2019-08-08 at 15.59.38](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 15.59.38.png)
+![Screen Shot 2019-08-08 at 15.59.38](Screen Shot 2019-08-08 at 15.59.38.png)
 
 As we approach the local minimun, gradient descent will automatically take smaller steps so there is no need to decrese $\alpha$ over time. 
 
@@ -128,7 +128,7 @@ As we approach the local minimun, gradient descent will automatically take small
 
 #### Grading Descent for Linear Regression 
 
-![Screen Shot 2019-08-08 at 16.27.45](/Users/nestorivanmo/Desktop/MachineLearning/Week1/Screen Shot 2019-08-08 at 16.27.45.png)
+![Screen Shot 2019-08-08 at 16.27.45](Screen Shot 2019-08-08 at 16.27.45.png)
 
 **Batch** grading descent: each step of gradient descent uses all the training sets. 
 
