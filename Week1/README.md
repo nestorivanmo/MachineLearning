@@ -138,5 +138,3 @@ As we approach the local minimun, gradient descent will automatically take small
 
 
 
-
-
