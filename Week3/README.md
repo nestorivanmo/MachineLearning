@@ -154,7 +154,47 @@ How to solve it?
 
    - Works well when we have a lot of features, each one contributing to predicting the value of $y$. 
 
+---
 
+#### Regularization: Cost Function 
+
+![Screen Shot 2019-08-25 at 21.32.21](Screen Shot 2019-08-25 at 21.32.21.png)
+
+The idea of regularization is to penalize those extra $\Theta$ parameters so that we end up with a simpley hypothesis. 
+
+![Screen Shot 2019-08-25 at 21.38.34](Screen Shot 2019-08-25 at 21.38.34.png)
+
+The first term: fit the training data well.
+
+The second term: keep the parameters small. $\lambda$
+
+![Screen Shot 2019-08-25 at 21.41.49](Screen Shot 2019-08-25 at 21.41.49.png)
+
+What if we set $\lambda$ to an extremely large value ? -> **underfitting**
+
+![Screen Shot 2019-08-25 at 21.43.55](Screen Shot 2019-08-25 at 21.43.55.png)
+
+Some care should be taken in the choice of $\lambda$. 
+
+---
+
+#### Regularization: Regularized linear regression 
+
+![Screen Shot 2019-08-25 at 21.54.27](Screen Shot 2019-08-25 at 21.54.27.png)
+
+![Screen Shot 2019-08-25 at 21.58.43](Screen Shot 2019-08-25 at 21.58.43.png)
+
+---
+
+#### Regularized logistic regresssion 
+
+We've seen that logistic regression could also be affected by overfitting. Now, our modified cost function for logistic regression: 
+
+<u>Note:</u> notice that we are penalizing $\Theta_j$ parameters starting from $j=1$ and we do not affect $\Theta_0$. 
+
+![Screen Shot 2019-08-25 at 22.04.21](Screen Shot 2019-08-25 at 22.04.21.png)
+
+![Screen Shot 2019-08-25 at 22.06.03](Screen Shot 2019-08-25 at 22.06.03.png)
 
 
 
