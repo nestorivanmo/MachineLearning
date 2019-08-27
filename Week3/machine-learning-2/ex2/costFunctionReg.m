@@ -17,27 +17,35 @@ grad = zeros(size(theta));
 %               Compute the partial derivatives and set grad to the partial
 %               derivatives of the cost w.r.t. each parameter in theta
 
-Xh = X(2:118,2:28);
-th = theta(2:28,1);
-yh = y(2:118,1);
+% lists without the first parameter
+theta_m = theta(2:end,1); % 27 x 1 
+X_m = X(:,2:end); % 118 x 27 
 
-h = sigmoid(Xh*th)';
-left = log(h)*(-yh);
-right = log(1-h)*(1-yh);
-s = sum(left - right);
-J = ((1/m) * s) + ((lambda/(2*m))*sum(th.^2));
+%hypothesis
+h_m = sigmoid(theta_m' * X_m')'; %118 x 1  
 
+%parameters 
+left = -y' * log(h_m); % 
+right = (1-y)' * log(1-h_m);% 117 x 117 
+central = sum(left - right);
 
-X1 = X(1,:);
-t1 = theta(1,1);
-y1 = y(1,1);
-gradZero = (1/m) * sum((sigmoid(X1*t1)'-y1)*X1);
+%cost function 
+j = ((1/m) * central) + ((lambda/m)*sum(theta_m));
+J = round(1000 * j) / 1000;
 
-originalGrad = (1/m) * sum((sigmoid(Xh*th)'-yh)*Xh);
-regularizedP = (lambda/m) * th;
-gradAll = originalGrad + regularizedP;
+%gradient for j = 0
 
-%grad = [gradZero;gradAll];
+h_z = sigmoid(theta(1)' * X(:,1)')';
+d = h_z - y; 
+c = sum(d' * X(:,1));
+grad_z = round(10000 * ((1/m) * c)) / 10000;
+
+%0.008475
+
+grad_m = round(10000 * ((1/m)*X_m'*(h_m-y) + ((lambda/m)*theta_m)) ) / 10000;
+
+grad = [grad_z; grad_m];
+
 % =============================================================
 
 end
