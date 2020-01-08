@@ -15,9 +15,9 @@
 
 What is Machine Learning ? 
 
-Field of study that gives computer the ability to learn without being explicitely programmed ~ Arthur Samuel (1959) 
+> Field of study that gives computer the ability to learn without being explicitely programmed ~ Arthur Samuel (1959) 
 
-A computer program is said to *learn* from experience E with respect to some task T and some measure of performance P, if its performance on T, as measured by P, improves with experience E ~ Tom Mitchel (1998)
+> A computer program is said to *learn* from experience E with respect to some task T and some measure of performance P, if its performance on T, as measured by P, improves with experience E ~ Tom Mitchel (1998)
 
 **Machine Learning algorithms**
 
