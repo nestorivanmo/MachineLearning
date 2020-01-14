@@ -18,7 +18,7 @@ Neural Networks are a pretty old algorithm that was originally motivated by the 
 
 ### Model Representation I
 
-The idea is to understand how to represent a neural network. Neural networks were developed as simulating neurons or networs of neurons in the brain. Basically a neuron has input wires called dendrites which receive inputs from other neurons. It has a body that process the information and an output wire that is used to send signals to other neurons. 
+The idea is to understand how to represent a neural network. Neural networks were developed as simulating neurons or networks of neurons in the brain. Basically a neuron has input wires called dendrites which receive inputs from other neurons. It has a body that process the information and an output wire that is used to send signals to other neurons. 
 
 > A neuron is a computational unit that gets a number of inputs through its input wires and does some computation and then it sends outputs via its axon to other nodes or other neurons in the brain. 
 
@@ -26,7 +26,11 @@ The idea is to understand how to represent a neural network. Neural networks wer
 
 ![icon](images/NeuronModel-LogisticUnit.png)
 
+$g(z) = \frac{1}{1+e^{-z}}$ 
 
+$h_\Theta(x) = \frac{1}{1+e^{-\Theta^Tx}}$
+
+$z=\Theta^Tx$
 
 > A neural network is just a group of this different neurons combined together. 
 
@@ -93,6 +97,12 @@ $h_\Theta(x)=a^{(j+1)}=g(z^{(j+1)})$
 ![icon](images/NOT(X1)ANDNOT(X2).png)
 
 ![icon](images/XNOR-function-nn.png)
+
+### Multiclass Classification
+
+To classify data into multiple classes, we let our hypothesis function return a vector of values. 
+
+![icon](images/MultipleClassification-OneVsAll.png)
 
 
 
